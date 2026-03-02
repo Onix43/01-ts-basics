@@ -1,4 +1,6 @@
-function logStatus(status: status): void {
+type Status = "loading" | "success" | "error";
+
+function logStatus(status: Status): void {
   if (status === "loading") {
     console.log("Loading...");
   } else if (status === "success") {
@@ -7,6 +9,5 @@ function logStatus(status: status): void {
     console.log("Something went wrong");
   }
 }
-type status = "loading" | "success" | "error";
 
 logStatus("loading");
